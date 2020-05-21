@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AracSatısModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="AracSatısEntities" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="alfabrikaKayit" ReturnType="Collection(AracSatısModel.alfabrikaKayit_Result)" />
+  </EntityContainer>
+  <ComplexType Name="alfabrikaKayit_Result">
+    <Property Type="Int32" Name="fabrikaid" Nullable="false" />
+    <Property Type="String" Name="fabrikadi" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="adres" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="email" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="tel" Nullable="true" />
+  </ComplexType>
+</Schema>

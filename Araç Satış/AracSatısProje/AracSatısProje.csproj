@@ -1,0 +1,404 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.0\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D1C44E40-E150-41BF-8AF8-87C4B4C39B69}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>AracSatısProje</RootNamespace>
+    <AssemblyName>AracSatısProje</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="itextsharp">
+      <HintPath>E:\Compressed\itextsharp\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.License, Version=1.3.7.46, Culture=neutral, PublicKeyToken=b1144360237c8b3f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.PDF.5.12.15\lib\net46\Spire.License.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.Pdf, Version=5.12.15.2046, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.PDF.5.12.15\lib\net46\Spire.Pdf.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="alfabrikaKayit_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="anaMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="anaMenu.Designer.cs">
+      <DependentUpon>anaMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="aracguncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="aracguncelle.Designer.cs">
+      <DependentUpon>aracguncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AracKayit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AracKayit.Designer.cs">
+      <DependentUpon>AracKayit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="raporServis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="raporServis.Designer.cs">
+      <DependentUpon>raporServis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="raporSilinen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="raporSilinen.Designer.cs">
+      <DependentUpon>raporSilinen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\aracRapor.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>aracRapor.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="raporFabrika.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="raporFabrika.Designer.cs">
+      <DependentUpon>raporFabrika.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\fabrikaRapor.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>fabrikaRapor.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Raporarackayit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Raporarackayit.Designer.cs">
+      <DependentUpon>Raporarackayit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="raporSatis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="raporSatis.Designer.cs">
+      <DependentUpon>raporSatis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Raporyedekparca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Raporyedekparca.Designer.cs">
+      <DependentUpon>Raporyedekparca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AracSatis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AracSatis.Designer.cs">
+      <DependentUpon>AracSatis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="aracSec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="aracSec.Designer.cs">
+      <DependentUpon>aracSec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="baglantiAdres.cs" />
+    <Compile Include="IUaracSec.cs" />
+    <Compile Include="markasec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="markasec.Designer.cs">
+      <DependentUpon>markasec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonelArama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonelArama.Designer.cs">
+      <DependentUpon>PersonelArama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="personelKayit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="personelKayit.Designer.cs">
+      <DependentUpon>personelKayit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fabrikaKayit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fabrikaKayit.Designer.cs">
+      <DependentUpon>fabrikaKayit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MarkaStok.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MarkaStok.Designer.cs">
+      <DependentUpon>MarkaStok.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\satisRapor.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>satisRapor.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="satisSil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="satisSil.Designer.cs">
+      <DependentUpon>satisSil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="servisKayit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="servisKayit.Designer.cs">
+      <DependentUpon>servisKayit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\servisRapor.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>servisRapor.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\silinenRapor.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>silinenRapor.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="YedekParca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YedekParca.Designer.cs">
+      <DependentUpon>YedekParca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Giris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Giris.Designer.cs">
+      <DependentUpon>Giris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="musteriKayit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="musteriKayit.Designer.cs">
+      <DependentUpon>musteriKayit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report\yedekparcaRapor.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>yedekparcaRapor.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <EmbeddedResource Include="anaMenu.resx">
+      <DependentUpon>anaMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="aracguncelle.resx">
+      <DependentUpon>aracguncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AracKayit.resx">
+      <DependentUpon>AracKayit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="raporServis.resx">
+      <DependentUpon>raporServis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="raporSilinen.resx">
+      <DependentUpon>raporSilinen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\aracRapor.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>aracRapor.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="raporFabrika.resx">
+      <DependentUpon>raporFabrika.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\fabrikaRapor.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>fabrikaRapor.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Raporarackayit.resx">
+      <DependentUpon>Raporarackayit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="raporSatis.resx">
+      <DependentUpon>raporSatis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Raporyedekparca.resx">
+      <DependentUpon>Raporyedekparca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AracSatis.resx">
+      <DependentUpon>AracSatis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="aracSec.resx">
+      <DependentUpon>aracSec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="markasec.resx">
+      <DependentUpon>markasec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="musteriKayit.resx">
+      <DependentUpon>musteriKayit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonelArama.resx">
+      <DependentUpon>PersonelArama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="personelKayit.resx">
+      <DependentUpon>personelKayit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fabrikaKayit.resx">
+      <DependentUpon>fabrikaKayit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MarkaStok.resx">
+      <DependentUpon>MarkaStok.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\satisRapor.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>satisRapor.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="satisSil.resx">
+      <DependentUpon>satisSil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="servisKayit.resx">
+      <DependentUpon>servisKayit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\servisRapor.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>servisRapor.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\silinenRapor.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>silinenRapor.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YedekParca.resx">
+      <DependentUpon>YedekParca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Giris.resx">
+      <DependentUpon>Giris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Report\yedekparcaRapor.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>yedekparcaRapor.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EntityDeploy Include="Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\alfabrikaKayit_Result.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.0\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.0\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.0\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.targets')" />
+</Project>

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AracSatısModelStoreContainer" CdmEntityContainer="AracSatısEntities">
+    <FunctionImportMapping FunctionImportName="alfabrikaKayit" FunctionName="AracSatısModel.Store.alfabrikaKayit">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AracSatısModel.alfabrikaKayit_Result">
+          <ScalarProperty Name="fabrikaid" ColumnName="fabrikaid" />
+          <ScalarProperty Name="fabrikadi" ColumnName="fabrikadi" />
+          <ScalarProperty Name="adres" ColumnName="adres" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="tel" ColumnName="tel" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>
